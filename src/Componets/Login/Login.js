@@ -1,19 +1,23 @@
 import { Container } from "../Container/Container";
-import { Main } from '../Login/Login-style'
+import { Main, Top, Logo } from '../Login/Login-style'
+import logo from '../../Assets/IMG/logo.png'
 
 function Login() {
     return (
         <Container>
-            <header>
-                <button>Entrar</button>
-                <button>Cadastrar-se</button>
-            </header>
+            <Top>
+                <p>Entrar</p>
+                <p>Cadastrar-se</p>
+            </Top>
             <Main>
-                <h1>Shortly</h1>
+                <Logo>
+                    <h1>Shortly</h1>
+                    <img src={logo} />
+                </Logo>
                 <form>
-                    <input />
-                    <input />
-                    <button>Cadastrar</button>
+                    <input placeholder="Email" />
+                    <input placeholder="Senha" />
+                    <button>Entrar</button>
                 </form>
             </Main>
         </Container>
