@@ -1,18 +1,25 @@
 import { Container } from "../Container/Container";
-import { Main } from '../Register/Register-style'
+import { Main, Top, Logo } from '../Register/Register-style'
+import logo from '../../Assets/IMG/logo.png'
+import { Input } from "../Input/Input";
 
 function Register() {
     return (
         <Container>
-            <header>
-                <button>Entrar</button>
-                <button>Cadastrar-se</button>
-            </header>
+            <Top>
+                <p>Entrar</p>
+                <p>Cadastrar-se</p>
+            </Top>
             <Main>
-                <h1>Shortly</h1>
+                <Logo>
+                    <h1>Shortly</h1>
+                    <img src={logo} />
+                </Logo>
                 <form>
-                    <input />
-                    <input />
+                    <Input placeholder="Nome" />
+                    <Input placeholder="Email" />
+                    <Input placeholder="Senha" />
+                    <Input placeholder="Confirmar senha" />
                     <button>Cadastrar</button>
                 </form>
             </Main>
