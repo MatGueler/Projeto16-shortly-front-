@@ -1,9 +1,21 @@
 import { Container } from "../Container/Container";
+import { Main } from '../Login/Login-style'
 
 function Login() {
     return (
         <Container>
-            <h1>Ola</h1>
+            <header>
+                <button>Entrar</button>
+                <button>Cadastrar-se</button>
+            </header>
+            <Main>
+                <h1>Shortly</h1>
+                <form>
+                    <input />
+                    <input />
+                    <button>Cadastrar</button>
+                </form>
+            </Main>
         </Container>
     )
 }
