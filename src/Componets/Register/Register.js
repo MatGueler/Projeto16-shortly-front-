@@ -2,13 +2,17 @@ import { Container } from "../Container/Container";
 import { Main, Top, Logo } from '../Register/Register-style'
 import logo from '../../Assets/IMG/logo.png'
 import { Input } from "../Input/Input";
+import { useNavigate } from 'react-router-dom'
 
 function Register() {
+
+    let navigate = useNavigate()
+
     return (
         <Container>
             <Top>
-                <p>Entrar</p>
-                <p>Cadastrar-se</p>
+                <p onClick={() => { navigate('/') }}>Entrar</p>
+                <p onClick={() => { navigate('/cadastro') }}>Cadastrar-se</p>
             </Top>
             <Main>
                 <Logo>

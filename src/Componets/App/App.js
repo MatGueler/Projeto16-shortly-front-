@@ -14,6 +14,7 @@ function App() {
 
         <Route path='/' element={<Login />} />
         <Route path='/cadastro' element={<Register />} />
+        <Route path='/menu' element={<Menu />} />
 
       </Routes>
       {/* </TokenContext.Provider> */}
