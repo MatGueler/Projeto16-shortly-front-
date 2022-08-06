@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // functions
 import Login from '../Login/Login';
+import Register from '../Register/Register';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
 
         <Route path='/' element={<Login />} />
+        <Route path='/cadastro' element={<Register />} />
 
       </Routes>
       {/* </TokenContext.Provider> */}

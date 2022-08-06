@@ -1,6 +1,7 @@
 import { Container } from "../Container/Container";
 import { Main, Top, Logo } from '../Login/Login-style'
 import logo from '../../Assets/IMG/logo.png'
+import { Input } from "../Input/Input";
 
 function Login() {
     return (
@@ -15,8 +16,8 @@ function Login() {
                     <img src={logo} />
                 </Logo>
                 <form>
-                    <input placeholder="Email" />
-                    <input placeholder="Senha" />
+                    <Input placeholder="Email" />
+                    <Input placeholder="Senha" />
                     <button>Entrar</button>
                 </form>
             </Main>

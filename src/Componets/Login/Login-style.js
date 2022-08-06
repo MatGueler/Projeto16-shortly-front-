@@ -26,13 +26,6 @@ form {
     align-items: center;
 }
 
-input{
-    width: 100%;
-    height: 60px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
 button{
     width: 200px;
     height: 60px;
@@ -41,6 +34,7 @@ button{
     border-radius: 5px;
     cursor: pointer;
     background-color: #5D9040;
+    box-shadow: 3px 3px 8px lightgray;
 }
 `
 
