@@ -8,4 +8,5 @@ export const Input = styled.input`
     border: 1px solid lightgray;
     box-shadow: 3px 3px 4px lightgray;
     box-sizing: border-box;
+    padding: 10px;
 `
