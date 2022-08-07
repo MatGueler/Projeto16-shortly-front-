@@ -4,12 +4,14 @@ import { useNavigate } from 'react-router-dom'
 import logo from '../../Assets/IMG/logo.png'
 import { Input } from "../Input/Input";
 import axios from 'axios'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import TokenContext from "../Contexts/TokenContext";
 
 function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { setToken } = useContext(TokenContext)
 
     let navigate = useNavigate()
 
@@ -28,7 +30,8 @@ function Login() {
 
             promise.then(res => {
                 console.log(res.data)
-                navigate('/cadastro')
+                setToken(res.data)
+                navigate('/menu')
             })
                 .catch(err => {
                     console.log(err)
@@ -49,8 +52,8 @@ function Login() {
                     <img src={logo} />
                 </Logo>
                 <form onSubmit={signIn}>
-                    <Input placeholder="Email" onChange={(e) => { setEmail(e.target.value) }} value={email} />
-                    <Input placeholder="Senha" onChange={(e) => { setPassword(e.target.value) }} value={password} />
+                    <Input type='text' placeholder="Email" onChange={(e) => { setEmail(e.target.value) }} value={email} />
+                    <Input type='password' placeholder="Senha" onChange={(e) => { setPassword(e.target.value) }} value={password} />
                     <button>Entrar</button>
                 </form>
             </Main>
