@@ -69,17 +69,19 @@ display: flex;
 justify-content: space-around;
 background-color: #80CC74;
 border-radius: 10px 0 0 10px;
+padding: 0 10px;
 
 p {
     display: flex;
     align-items: center;
-    width: 150px;
+    width: 300px;
     word-break: break-all;
     color: #FFFFFF;
 }
 `
 
 export const Delete = styled.div`
+height: 60px;
 width: 100px;
 display: flex;
 align-items: center;
