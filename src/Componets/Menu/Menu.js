@@ -13,32 +13,32 @@ function Menu() {
     const [url, setUrl] = useState('');
     const { token } = useContext(TokenContext)
     const [infos, setInfos] = useState([])
+    const [updatePage, setUpdatePage] = useState(true)
 
     let navigate = useNavigate()
 
     function encodeUrl(event) {
         event.preventDefault();
-        // const body = {
-        //     email,
-        //     password
-        // }
-        // if (password.length < 6) {
-        //     alert('Digite os dados corretamente!')
-        // }
-        // else {
 
-        //     const promise = axios.post('https://project-shortly-16.herokuapp.com/signin', body)
+        const body = {
+            url
+        }
 
-        //     promise.then(res => {
-        //         console.log(res.data)
-        //         navigate('/cadastro')
-        //     })
-        //         .catch(err => {
-        //             console.log(err)
-        //         })
+        const config = {
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        }
+        const promise = axios.post('https://project-shortly-16.herokuapp.com/urls/shorten', body, config)
 
-        // }
-        console.log(token)
+        promise.then(res => {
+            console.log(res.data)
+            setUrl('')
+            setUpdatePage(!updatePage)
+        })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
     useEffect(() => {
@@ -46,17 +46,13 @@ function Menu() {
             headers: {
                 "Authorization": `Bearer ${token}`
             }
-        })
+        }, [infos])
 
         promise.then(res => {
             console.log(res.data)
             setInfos(res.data)
         }).catch(err => console.log(err))
-    }, [])
-
-
-    console.log()
-    // console.log(infos.shortenedUrls)
+    }, [updatePage])
 
     function ShowMyUrls({ item }) {
         return (
@@ -78,8 +74,8 @@ function Menu() {
             <Top>
                 <h2>Ola, {infos.name}!</h2>
                 <Buttons>
-                    <p onClick={() => { navigate('/') }}>Home</p>
-                    <p onClick={() => { navigate('/') }}>Ranking</p>
+                    <p onClick={() => { navigate('/menu') }}>Home</p>
+                    <p onClick={() => { navigate('/ranking/geral') }}>Ranking</p>
                     <p onClick={() => { navigate('/') }}>Sair</p>
                 </Buttons>
             </Top>
