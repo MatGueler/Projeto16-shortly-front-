@@ -13,10 +13,11 @@ import { useState } from 'react';
 function App() {
 
   const [token, setToken] = useState('')
+  const [infos, setInfos] = useState([])
 
   return (
     <BrowserRouter>
-      <TokenContext.Provider value={{ token, setToken }}>
+      <TokenContext.Provider value={{ token, setToken, infos, setInfos }}>
         <Routes>
 
           <Route path='/' element={<Login />} />

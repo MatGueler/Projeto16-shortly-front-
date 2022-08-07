@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Top = styled.div`
 width: 100%;
 display: flex;
-justify-content: end;
+justify-content: space-between;
 padding: 20px;
 box-sizing: border-box;
 `

@@ -73,10 +73,14 @@ padding: 0 10px;
 
 p {
     display: flex;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     width: 300px;
     word-break: break-all;
     color: #FFFFFF;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 `
 

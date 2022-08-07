@@ -11,8 +11,7 @@ import axios from "axios";
 function Menu() {
 
     const [url, setUrl] = useState('');
-    const { token } = useContext(TokenContext)
-    const [infos, setInfos] = useState([])
+    const { token, setInfos, infos } = useContext(TokenContext)
     const [updatePage, setUpdatePage] = useState(true)
 
     let navigate = useNavigate()
