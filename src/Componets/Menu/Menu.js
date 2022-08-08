@@ -59,11 +59,24 @@ function Menu() {
                     <p>{item.shortUrl}</p>
                     <p>{item.visitCount}</p>
                 </Infos>
-                <Delete>
+                <Delete onClick={deleteUrl}>
                     <BsFillTrashFill color="#EA4F4F" size={25} />
                 </Delete>
             </ShortUrl>
         )
+
+        function deleteUrl() {
+
+            const promise = axios.delete(`https://project-shortly-16.herokuapp.com/urls/${item.id}`, {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            })
+
+            promise.then(res => {
+                setUpdatePage(!updatePage)
+            }).catch(err => console.log(err))
+        }
     }
 
     return (

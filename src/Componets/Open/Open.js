@@ -23,7 +23,6 @@ function Open() {
         const promise = axios.get(URL, body)
 
         promise.then((res) => {
-            console.log((res.data).split(' ')[3])
             const urlOriginal = (res.data).split(' ')
             window.location.href = urlOriginal[3]
         }).catch((res) => {
