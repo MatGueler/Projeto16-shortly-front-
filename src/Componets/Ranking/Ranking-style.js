@@ -47,6 +47,12 @@ p{
     color:#9C9C9C;
 }
 
+h3{
+    cursor: pointer;
+    margin: 0 10px;
+    color:#9C9C9C;
+}
+
 p:last-child{
     text-decoration: underline;
 }

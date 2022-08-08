@@ -12,7 +12,7 @@ function Ranking() {
     const [updatePage, setUpdatePage] = useState(true)
     const [ranking, setRanking] = useState([])
 
-    const { token, setInfos, infos } = useContext(TokenContext)
+    const { token, setToken, infos } = useContext(TokenContext)
 
     let navigate = useNavigate();
 
@@ -41,7 +41,7 @@ function Ranking() {
                     <Buttons>
                         <p onClick={() => { navigate('/ranking/geral') }}><span>Ranking</span></p>
                         <p onClick={() => { navigate('/') }}>Entrar</p>
-                        <p onClick={() => { navigate('/cadastro') }}>Cadastrar-se</p>
+                        <h3 onClick={() => { navigate('/cadastro') }}>Cadastrar-se</h3>
                     </Buttons>
                 </Top> :
                 <Top>
@@ -49,7 +49,10 @@ function Ranking() {
                     <Buttons>
                         <p onClick={() => { navigate('/menu') }}>Home</p>
                         <p onClick={() => { navigate('/ranking/geral') }}>Ranking</p>
-                        <p onClick={() => { navigate('/') }}>Sair</p>
+                        <p onClick={() => {
+                            setToken('')
+                            navigate('/')
+                        }}>Sair</p>
                     </Buttons>
                 </Top>
             }
