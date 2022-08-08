@@ -1,5 +1,5 @@
 import { Container } from "../Container/Container";
-import { Main, Top, Logo } from '../Login/Login-style'
+import { Main, Top, Logo, Buttons } from '../Login/Login-style'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../Assets/IMG/logo.png'
 import { Input } from "../Input/Input";
@@ -42,9 +42,13 @@ function Login() {
     return (
         <Container>
             <Top>
-                <p onClick={() => { navigate('/ranking/geral') }}>Ranking</p>
-                <p onClick={() => { navigate('/') }}><span>Entrar</span></p>
-                <p onClick={() => { navigate('/cadastro') }}>Cadastrar-se</p>
+                <h2></h2>
+                <Buttons>
+                    <p onClick={() => { navigate('/acessar') }}>Acessar</p>
+                    <p onClick={() => { navigate('/ranking/geral') }}>Ranking</p>
+                    <p onClick={() => { navigate('/') }}><span>Entrar</span></p>
+                    <p onClick={() => { navigate('/cadastro') }}>Cadastrar-se</p>
+                </Buttons>
             </Top>
             <Main>
                 <Logo>

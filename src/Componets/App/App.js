@@ -9,6 +9,7 @@ import Menu from '../Menu/Menu';
 import Ranking from '../Ranking/Ranking';
 import TokenContext from '../Contexts/TokenContext'
 import { useState } from 'react';
+import Open from '../Open/Open';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/' element={<Login />} />
           <Route path='/cadastro' element={<Register />} />
           <Route path='/menu' element={<Menu />} />
+          <Route path='/acessar' element={<Open />} />
           <Route path='/ranking/geral' element={<Ranking />} />
 
         </Routes>
