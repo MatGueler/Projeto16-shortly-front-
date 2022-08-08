@@ -90,7 +90,7 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 300px;
+    width: 250px;
     word-break: break-all;
     color: #FFFFFF;
     padding: 0 10px;
