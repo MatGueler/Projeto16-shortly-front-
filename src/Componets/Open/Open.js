@@ -25,8 +25,8 @@ function Open() {
         promise.then((res) => {
             const urlOriginal = (res.data).split(' ')
             window.location.href = urlOriginal[3]
-        }).catch((res) => {
-            console.log(res)
+        }).catch((err) => {
+            alert(err.response.data)
         })
     }
 
