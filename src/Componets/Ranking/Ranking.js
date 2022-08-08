@@ -48,6 +48,7 @@ function Ranking() {
                 <Top>
                     <h2>Ola, {infos.name}!</h2>
                     <Buttons>
+                        <p onClick={() => { navigate('/acessar') }}>Acessar</p>
                         <p onClick={() => { navigate('/menu') }}>Home</p>
                         <p onClick={() => { navigate('/ranking/geral') }}>Ranking</p>
                         <p onClick={() => {
