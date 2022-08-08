@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 
 export const Top = styled.div`
+width: 100%;
 display: flex;
-position: absolute;
-top: 20px;
-right: 20px;
+justify-content: space-between;
+padding: 20px;
 box-sizing: border-box;
 
 p{
@@ -43,6 +43,21 @@ button{
 }
 `
 
+export const Buttons = styled.div`
+display: flex;
+
+p{
+    cursor: pointer;
+    margin: 0 10px;
+    color:#9C9C9C;
+}
+
+p:last-child{
+    text-decoration: underline;
+}
+`
+
+
 export const Logo = styled.div`
 width: 100%;
 display: flex;
@@ -53,6 +68,4 @@ h1{
     text-align: center;
     font-size: 64px;
 }
-
-display: flex;
 `

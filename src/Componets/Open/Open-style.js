@@ -16,6 +16,10 @@ p{
     cursor: pointer;
     margin: 0 10px;
 }
+
+span{
+    color: #5D9040;
+}
 `
 
 export const Main = styled.div`

@@ -36,8 +36,9 @@ function Open() {
             <Top>
                 <h2></h2>
                 <Buttons>
+                    <p onClick={() => { navigate('/acessar') }}><span>Acessar</span></p>
                     <p onClick={() => { navigate('/ranking/geral') }}>Ranking</p>
-                    <p onClick={() => { navigate('/') }}><span>Entrar</span></p>
+                    <p onClick={() => { navigate('/') }}>Entrar</p>
                     <p onClick={() => { navigate('/cadastro') }}>Cadastrar-se</p>
                 </Buttons>
             </Top>
