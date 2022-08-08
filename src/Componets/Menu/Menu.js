@@ -11,7 +11,7 @@ import axios from "axios";
 function Menu() {
 
     const [url, setUrl] = useState('');
-    const { token, setInfos, infos } = useContext(TokenContext)
+    const { token, setToken, setInfos, infos } = useContext(TokenContext)
     const [updatePage, setUpdatePage] = useState(true)
 
     let navigate = useNavigate()
@@ -31,7 +31,6 @@ function Menu() {
         const promise = axios.post('https://project-shortly-16.herokuapp.com/urls/shorten', body, config)
 
         promise.then(res => {
-            console.log(res.data)
             setUrl('')
             setUpdatePage(!updatePage)
         })
@@ -48,7 +47,6 @@ function Menu() {
         }, [infos])
 
         promise.then(res => {
-            console.log(res.data)
             setInfos(res.data)
         }).catch(err => console.log(err))
     }, [updatePage])
@@ -75,7 +73,10 @@ function Menu() {
                 <Buttons>
                     <p onClick={() => { navigate('/menu') }}>Home</p>
                     <p onClick={() => { navigate('/ranking/geral') }}>Ranking</p>
-                    <p onClick={() => { navigate('/') }}>Sair</p>
+                    <p onClick={() => {
+                        setToken('')
+                        navigate('/')
+                    }}>Sair</p>
                 </Buttons>
             </Top>
             <Main>
@@ -90,7 +91,7 @@ function Menu() {
                 <UserUrls>
                     {(infos.length === 0) ?
                         '' :
-                        (infos.shortenedUrls).map((item) => { return (<ShowMyUrls item={item} />) })
+                        (infos.shortenedUrls).map((item, index) => { return (<ShowMyUrls key={index} item={item} />) })
                     }
                 </UserUrls>
             </Main>

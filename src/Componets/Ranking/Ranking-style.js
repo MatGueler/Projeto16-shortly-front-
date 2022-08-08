@@ -6,6 +6,10 @@ display: flex;
 justify-content: space-between;
 padding: 20px;
 box-sizing: border-box;
+
+h2{
+    color: #5D9040
+}
 `
 
 export const Main = styled.div`
@@ -40,11 +44,21 @@ display: flex;
 p{
     cursor: pointer;
     margin: 0 10px;
-    color:#5D9040;
+    color:#9C9C9C;
+}
+
+h3{
+    cursor: pointer;
+    margin: 0 10px;
+    color:#9C9C9C;
 }
 
 p:last-child{
-    color: #9C9C9C;
+    text-decoration: underline;
+}
+
+span{
+    color: #5D9040;
 }
 `
 

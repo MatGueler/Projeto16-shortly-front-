@@ -11,6 +11,12 @@ box-sizing: border-box;
 p{
     cursor: pointer;
     margin: 0 10px;
+    color:#9C9C9C;
+    text-decoration: none;
+}
+
+span{
+    color: #5D9040;
 }
 `
 
