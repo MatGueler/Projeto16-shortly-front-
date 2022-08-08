@@ -8,6 +8,10 @@ justify-content: space-between;
 padding: 20px;
 box-sizing: border-box;
 
+h2{
+    color: #5D9040
+}
+
 p{
     cursor: pointer;
     margin: 0 10px;
@@ -54,6 +58,16 @@ h1{
 
 export const Buttons = styled.div`
 display: flex;
+
+p{
+    cursor: pointer;
+    margin: 0 10px;
+    color:#9C9C9C;
+}
+
+p:last-child{
+    text-decoration: underline;
+}
 `
 
 export const UserUrls = styled.div`

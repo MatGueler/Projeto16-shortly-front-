@@ -11,8 +11,9 @@ function Register() {
     return (
         <Container>
             <Top>
+                <p onClick={() => { navigate('/ranking/geral') }}>Ranking</p>
                 <p onClick={() => { navigate('/') }}>Entrar</p>
-                <p onClick={() => { navigate('/cadastro') }}>Cadastrar-se</p>
+                <p onClick={() => { navigate('/cadastro') }}><span>Cadastrar-se</span></p>
             </Top>
             <Main>
                 <Logo>

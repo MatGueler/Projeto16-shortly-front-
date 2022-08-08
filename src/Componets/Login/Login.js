@@ -29,7 +29,6 @@ function Login() {
             const promise = axios.post('https://project-shortly-16.herokuapp.com/signin', body)
 
             promise.then(res => {
-                console.log(res.data)
                 setToken(res.data)
                 navigate('/menu')
             })
@@ -43,7 +42,8 @@ function Login() {
     return (
         <Container>
             <Top>
-                <p onClick={() => { navigate('/') }}>Entrar</p>
+                <p onClick={() => { navigate('/ranking/geral') }}>Ranking</p>
+                <p onClick={() => { navigate('/') }}><span>Entrar</span></p>
                 <p onClick={() => { navigate('/cadastro') }}>Cadastrar-se</p>
             </Top>
             <Main>

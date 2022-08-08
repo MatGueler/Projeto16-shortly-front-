@@ -21,7 +21,6 @@ function Ranking() {
         const promise = axios.get('https://project-shortly-16.herokuapp.com/ranking')
 
         promise.then(res => {
-            console.log(res.data)
             setRanking(res.data)
         }).catch(err => console.log(err))
     }, [])
@@ -40,6 +39,7 @@ function Ranking() {
                 <Top>
                     <h2></h2>
                     <Buttons>
+                        <p onClick={() => { navigate('/ranking/geral') }}><span>Ranking</span></p>
                         <p onClick={() => { navigate('/') }}>Entrar</p>
                         <p onClick={() => { navigate('/cadastro') }}>Cadastrar-se</p>
                     </Buttons>

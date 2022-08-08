@@ -31,7 +31,6 @@ function Menu() {
         const promise = axios.post('https://project-shortly-16.herokuapp.com/urls/shorten', body, config)
 
         promise.then(res => {
-            console.log(res.data)
             setUrl('')
             setUpdatePage(!updatePage)
         })
@@ -48,7 +47,6 @@ function Menu() {
         }, [infos])
 
         promise.then(res => {
-            console.log(res.data)
             setInfos(res.data)
         }).catch(err => console.log(err))
     }, [updatePage])
