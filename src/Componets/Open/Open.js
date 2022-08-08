@@ -23,7 +23,8 @@ function Open() {
         const promise = axios.get(URL, body)
 
         promise.then((res) => {
-            window.location.href = `https://project-shortly-16.herokuapp.com/urls/open/${url}`
+            console.log(res.data)
+            window.location.href = res.data
         }).catch((res) => {
             console.log(res)
         })
