@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# <p align = "center"> Shortly </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align = "center">
+   <img src="https://img.shields.io/badge/author-Mateus Gueler-4dae71?style=flat-square" />
+   <img src="https://img.shields.io/github/languages/count/MatGueler/Projeto16-shortly-front-?color=4dae71&style=flat-square" />
+</p>
 
-## Available Scripts
+## :clipboard: Descrição
 
-In the project directory, you can run:
+O **Shortly** é um projeto para o usuário criar links curtos para compartilhar com mais facilidade com os amigos, evitando aquele link enorme que ocupa várias linhas na hora de enviar para os amigos. O usuário pode criar um link encurtado e gerenciar a quantidade de acessos que aquele link obteve.
 
-### `npm start`
+## :computer: Tecnologias e Conceitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- REST APIs
+- Node.js (v16.17.0)
+- JavaScript
+- React
+- Vercel
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## :rocket: Rotas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```yml
+Endpoint: '/'
+    - Rota para o usuário fazer login com sua conta
+```
 
-### `npm run build`
+```yml
+Endpoint: '/cadastro'
+    - Rota para o usuário criar sua conta
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```yml
+Endpoint: '/menu (autenticada)'
+    - Rota onde o usuário pode controlar todos os links criados e criar novos links encurtados
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```yml
+Endpoint: '/acessar (autenticada)'
+    - Rota para o usuário acessar links encurtados
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```yml
+Endpoint: '/ranking/geral (autenticada)'
+    - Rota para o analisar o ranking de usuários com maior número de acessos
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🏁 Rodando a aplicação
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-Deploy
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A aplicação front-end está disponível em deploy na plataforma [VERCEL](https://vercel.com), basta acessar o link abaixo:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Shortly](https://projeto16-shortly-front-chi.vercel.app/)
 
-## Learn More
+- Local
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app), portanto, certifique-se de ter a última versão estável do [Node.js](https://nodejs.org/en/download/) e [npm](https://www.npmjs.com/) rodando localmente.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Primeiro, clone este repositório em sua máquina:
 
-### Code Splitting
+```
+git clone git@github.com:MatGueler/Projeto16-shortly-front-.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Em seguida, dentro da pasta, execute o seguinte comando para instalar as dependências.
 
-### Analyzing the Bundle Size
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Preencha o arquivo **.env** com a url do back-end rodando na sua máquina.
 
-### Making a Progressive Web App
+Terminado o processo, basta iniciar a aplicação:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+npm run start
+```
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+:stop_sign: Não se esqueça de executar a inicialização do servidor de aplicativos, disponível no repositório back-end, para testar totalmente o projeto.
