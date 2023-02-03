@@ -80,4 +80,4 @@ Terminado o processo, basta iniciar a aplicação:
 npm run start
 ```
 
-:stop_sign: Não se esqueça de executar a inicialização do servidor de aplicativos, disponível no repositório back-end, para testar totalmente o projeto.
+:stop_sign: Não se esqueça de executar a inicialização do servidor de aplicativos, disponível no [repositório back-end](https://github.com/MatGueler/Projeto16-shortly-back), para testar totalmente o projeto.
